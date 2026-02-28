@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Devin AI <158243242+devin-ai-integration[bot]@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.134.0"}
+psycopg = {extras = ["binary"], version = "^3.3.3"}
+python-multipart = "^0.0.22"
+aiofiles = "^25.1.0"
+httpx = "^0.28.1"
+python-dotenv = "^1.2.1"
+stripe = "^14.4.0"
+pinatapy-vourhey = "^0.2.0"
+aiohttp = "^3.13.3"
+ffmpeg-python = "^0.2.0"
+imageio-ffmpeg = "^0.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

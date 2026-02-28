@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0a0a0f;
+    color: #e4e4e7;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(15, 15, 25, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.timeline-track {
+  transition: all 0.2s ease;
+}
+
+.timeline-track:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+}
+
+.effect-card {
+  transition: all 0.3s ease;
+}
+
+.effect-card:hover {
+  transform: scale(1.02);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.upload-zone {
+  border: 2px dashed rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.upload-zone:hover,
+.upload-zone.dragover {
+  border-color: rgba(139, 92, 246, 0.7);
+  background: rgba(139, 92, 246, 0.05);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(139, 92, 246, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.6); }
+}
+
+.processing-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
